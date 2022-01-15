@@ -42,5 +42,5 @@ jobs:
       - run: bundle exec rake spec
       - run: bundle exec rubocop
       - run: gem update --system
-        if: ${{ matrix.ruby == "2.5" }}
+        if: matrix.ruby == '2.5'
       - run: bundle exec rake cucumber
